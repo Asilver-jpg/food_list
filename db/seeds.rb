@@ -7,14 +7,15 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 List.destroy_all()
 Item.destroy_all()
+ItemList.destroy_all()
 
+List.create(note: " ", name: "Grocery")
+List.create(note: " ", name:"Hardware")
 
-List.create(note: " ")
-List.create(note: " ")
-
-Item.create(name:"Bananna")
+ Item.create(name:"Bananna")
 Item.create(name:"Orange")
 
-ItemList.create(item_id:1, list_id:1, quantity: 2, note:"")
-ItemList.create(item_id:2, list_id:2, quantity: 3, note:"YAY")
+puts List.all
+puts Item.all
+ItemList.create!(item_id:Item.first.id, list_id:List.first.id, quantity: 2, note:"")
 
