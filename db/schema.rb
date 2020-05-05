@@ -16,8 +16,8 @@ ActiveRecord::Schema.define(version: 2020_05_04_210030) do
   enable_extension "plpgsql"
 
   create_table "item_lists", force: :cascade do |t|
-    t.string "item_id"
-    t.string "list_id"
+    t.integer "item_id"
+    t.integer "list_id"
     t.integer "quantity"
     t.string "note"
     t.datetime "created_at", precision: 6, null: false
