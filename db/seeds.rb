@@ -8,11 +8,15 @@
 List.destroy_all()
 Item.destroy_all()
 ItemList.destroy_all()
+User.destroy_all()
+
+User.create(first: "Alan", last: "Turing", username: "flatiron", password: "school", email: "admin@flatiron.com") 
+#byebug()
 
 List.create(note: " ", name: "Grocery")
 List.create(note: " ", name:"Hardware")
 
- Item.create(name:"Bananna")
+Item.create(name:"Bananna")
 Item.create(name:"Orange")
 
 puts List.all
